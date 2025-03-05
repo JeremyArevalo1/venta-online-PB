@@ -1,6 +1,7 @@
 'use strict'
 
 import mongoose from "mongoose";
+import Category from '../src/categories/category.model.js'
 
 export const dbConnection = async() => {
     try {
@@ -29,7 +30,29 @@ export const dbConnection = async() => {
             maxPoolSize: 50,
         });
 
+        await createCategoryDefault();
+
     } catch (error) {
         console.log('Database connection failed', error);
     }
 };
+
+const createCategoryDefault = async () => {
+    try {
+        const category = await Category.findOne({ nameCategory: 'UNIVERSAL' });
+
+        if (!category) {
+            const categoryDefault = new Category({
+                nameCategory: 'UNIVERSAL',
+                description: 'un poco de todo'
+            });
+
+            await categoryDefault.save();
+            console.log('Categoria predeterminada creada exitosamente');
+        } else {
+            console.log("La categoria ya existe");
+        }
+    } catch (error) {
+        console.log('Error creating category', error);
+    }
+}

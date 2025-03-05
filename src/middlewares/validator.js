@@ -4,10 +4,10 @@ import { esRoleValido, existenteEmail } from "../helpers/db-validator.js";
 
 export const registerValidator = [
     body('name', "The name is required").not().isEmpty(),
-    body('surname', 'The surname is required').not().isEmpty(),
+    body('username', 'The username is required').not().isEmpty(),
     body('email', 'you must enter a valid email').isEmail(),
     body('email').custom(existenteEmail),
-    body('role').optional().custom(esRoleValido),
+    body('role').custom(esRoleValido),
     body('password', 'Password must be at least 6 characteres').isLength({min: 6}),
     validarCampos
 ];

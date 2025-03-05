@@ -6,6 +6,10 @@ import helmet from "helmet";
 import morgan from "morgan";
 import { dbConnection } from './mongo.js';
 import limiter from '../src/middlewares/validar-cant-peticiones.js';
+import authRoutes from '../src/auth/auth-router.js';
+import authUsers from '../src/users/user.routes.js';
+import authCategoy from '../src/categories/category.routes.js';
+import authProduct from '../src/products/product.routes.js';
  
 
 const middlewares = (app) => {
@@ -18,7 +22,10 @@ const middlewares = (app) => {
 }
 
 const routes = (app) => {
-
+    app.use('/ventaOnline/v1/auth', authRoutes);
+    app.use('/ventaOnline/v1/users', authUsers);
+    app.use('/ventaOnline/v1/categories', authCategoy);
+    app.use('/ventaOnline/v1/products', authProduct);
 }
 
 const conectarDB = async () => {
