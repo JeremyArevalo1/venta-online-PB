@@ -14,7 +14,7 @@ export const loginAdmin = async (req, res) => {
 
         if (!user) {
             return res.status(400).json({
-                msg: 'Credencial incorrecta, correo no existe en la base de datos'
+                msg: 'Credencial incorrecta, correo o username no existe en la base de datos'
             })
         }
 
@@ -63,7 +63,7 @@ export const loginClient = async (req, res) => {
 
         if (!user) {
             return res.status(400).json({
-                msg: 'Credencial incorrecta, correo no existe en la base de datos'
+                msg: 'Credencial incorrecta, correo o username no existe en la base de datos'
             })
         }
 

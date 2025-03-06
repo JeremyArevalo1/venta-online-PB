@@ -12,7 +12,11 @@ const CategorySchema = Schema({
     estado: {
         type: Boolean,
         default: true
-    }
+    },
+    products: [{
+        type: Schema.Types.ObjectId,
+        ref: 'product'
+    }]
 }, 
     {
         timestamps: true,

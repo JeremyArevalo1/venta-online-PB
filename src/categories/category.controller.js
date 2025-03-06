@@ -11,6 +11,11 @@ export const getCategories = async (req, res) =>{
             Category.find(query)
                 .skip(Number(desde))
                 .limit(Number(limite))
+                .populate({
+                    path: 'products', // Campo que hace referencia a los productos
+                    select: 'nameProduct description price stock sold', // Seleccionamos los campos que queremos de los productos
+                    match: { estado: true } // Solo productos activos
+                })
         ])
 
         res.status(200).json({
@@ -118,7 +123,7 @@ export const updateCategory = async (req, res = response) => {
             });
         };
 
-        if (buscarCategory.nameCategory === 'UNIVERSAL') {
+        if (buscarCategory.nameCategory === 'UNIVERSAL'.toLocaleLowerCase()) {
             return res.status(403).json({
                 success: false,
                 message: 'La categoría predeterminada no se puede editar.'
@@ -186,14 +191,14 @@ export const deleteCategory = async (req, res = response) => {
             });
         };
 
-        if (buscarCategory.nameCategory === 'UNIVERSAL') {
+        if (buscarCategory.nameCategory === 'UNIVERSAL'.toLocaleLowerCase()) {
             return res.status(403).json({
                 success: false,
                 message: 'La categoría predeterminada no se puede eliminar.'
             });
         };
 
-        const categoryDefault = await Category.findOne({ nameCategory: 'UNIVERSAL' });
+        const categoryDefault = await Category.findOne({ nameCategory: 'UNIVERSAL'.toLowerCase() });
 
         if (!categoryDefault) {
             return res.status(404).json({

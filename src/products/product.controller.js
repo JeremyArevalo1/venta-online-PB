@@ -91,6 +91,9 @@ export const addProduct = async (req, res) => {
 
         await addProduct.save();
 
+        buscarCategory.products.push(addProduct._id);
+        await buscarCategory.save();
+
         res.status(200).json({
             success: true,
             product: addProduct
@@ -278,42 +281,57 @@ export const searchProductsByCategoryName = async (req, res) => {
     }
 };
 
-// producto mas vendido
-
 export const searchTopSellingProducts = async (req, res) => {
     try {
         const { limite = 10, desde = 0 } = req.query;
-
-        // Filtro para productos activos (estado: true)
         const query = { estado: true };
 
-        // Realizar la búsqueda con paginación y ordenación por 'sold' (productos más vendidos)
         const [total, products] = await Promise.all([
-            Product.countDocuments(query), // Contar los productos activos
-            Product.find(query) // Buscar los productos activos
-                .sort({ sold: -1 }) // Ordenar por 'sold' de mayor a menor
+            Product.countDocuments(query),
+            Product.find(query)
+                .sort({ sold: -1 })
+                .skip(Number(desde))
+                .limit(Number(limite))
+        ])
+
+        res.status(200).json({
+            success: true,
+            total,
+            products
+        })
+    } catch (error) {
+        res.status(500).json({
+            success: false,
+            msg: 'Error al obtener el producto',
+            error
+        })
+    }
+};
+
+// Productos agotados
+
+export const getOutOfStockProducts = async (req, res) => {
+    try {
+        const { limite = 10, desde = 0 } = req.query;
+        const query = { estado: true, stock: 0 }; // Solo productos con stock 0
+
+        const [total, products] = await Promise.all([
+            Product.countDocuments(query), // Contamos solo los productos sin stock
+            Product.find(query)
                 .skip(Number(desde))
                 .limit(Number(limite))
         ]);
-
-        if (products.length === 0) {
-            return res.status(404).json({
-                success: false,
-                msg: 'No se encontraron productos más vendidos'
-            });
-        }
 
         res.status(200).json({
             success: true,
             total,
             products
         });
-
     } catch (error) {
         res.status(500).json({
             success: false,
-            msg: 'Error al obtener los productos más vendidos',
-            error: error.message
+            msg: 'Error al obtener los productos agotados',
+            error
         });
     }
 };

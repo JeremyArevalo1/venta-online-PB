@@ -39,11 +39,11 @@ export const dbConnection = async() => {
 
 const createCategoryDefault = async () => {
     try {
-        const category = await Category.findOne({ nameCategory: 'UNIVERSAL' });
+        const category = await Category.findOne({ nameCategory: 'UNIVERSAL'.toLowerCase() });
 
         if (!category) {
             const categoryDefault = new Category({
-                nameCategory: 'UNIVERSAL',
+                nameCategory: 'UNIVERSAL'.toLowerCase(),
                 description: 'un poco de todo'
             });
 

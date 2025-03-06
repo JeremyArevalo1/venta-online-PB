@@ -1,25 +1,14 @@
 import { Router } from "express";
 import { check } from "express-validator";
-import { getProducts, getProductById, addProduct, updateProduct, deleteProduct, searchProductsByName, searchProductsByCategoryName, searchTopSellingProducts, getOutOfStockProducts } from "./product.controller.js";
+import { getShoppingCarts, getShoppingCartById, addShoppingCarts, updateShoppingCart, deleteShoppingCart, getShoppingCartByClient } from "./shoppingCart.controller.js";
 import { validarCampos } from "../middlewares/validar-campos.js";
 import { validarJWT } from "../middlewares/validar-jwt.js";
 
 const router = Router();
 
 router.get(
-    "/productoMasVendido",
-    searchTopSellingProducts
-);
-
-router.get(
-    "/productosAgotados",
-    getOutOfStockProducts
-);
-
-
-router.get(
     "/",
-    getProducts
+    getShoppingCarts
 );
 
 router.get(
@@ -28,16 +17,15 @@ router.get(
         check("id", "no es un id valido"),
         validarCampos
     ],
-    getProductById
+    getShoppingCartById
 );
 
 router.post(
     "/",
     [
-        validarJWT,
         validarCampos
     ],
-    addProduct
+    addShoppingCarts
 );
 
 router.put(
@@ -47,7 +35,7 @@ router.put(
         check("id", "No es un id válido").isMongoId(),
         validarCampos
     ],
-    updateProduct
+    updateShoppingCart
 );
 
 router.delete(
@@ -57,19 +45,16 @@ router.delete(
         check("id", "No es un id valido"),
         validarCampos
     ],
-    deleteProduct
+    deleteShoppingCart
 );
 
 router.get(
-    "/buscarProductoPorNombre/:name",
-    searchProductsByName
+    "/getShoppingCartByClient/:id",
+    [
+        check("id", "no es un id valido"),
+        validarCampos
+    ],
+    getShoppingCartByClient
 );
-
-router.get(
-    "/buscarProductoPorCategoria/:categoryName",
-    searchProductsByCategoryName
-);
-
-
 
 export default router;
