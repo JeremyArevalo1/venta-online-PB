@@ -308,8 +308,6 @@ export const searchTopSellingProducts = async (req, res) => {
     }
 };
 
-// Productos agotados
-
 export const getOutOfStockProducts = async (req, res) => {
     try {
         const { limite = 10, desde = 0 } = req.query;
