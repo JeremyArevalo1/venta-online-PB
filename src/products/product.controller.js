@@ -313,10 +313,10 @@ export const searchTopSellingProducts = async (req, res) => {
 export const getOutOfStockProducts = async (req, res) => {
     try {
         const { limite = 10, desde = 0 } = req.query;
-        const query = { estado: true, stock: 0 }; // Solo productos con stock 0
+        const query = { estado: true, stock: 0 };
 
         const [total, products] = await Promise.all([
-            Product.countDocuments(query), // Contamos solo los productos sin stock
+            Product.countDocuments(query),
             Product.find(query)
                 .skip(Number(desde))
                 .limit(Number(limite))

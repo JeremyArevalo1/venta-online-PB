@@ -123,7 +123,7 @@
 								"header": [],
 								"body": {
 									"mode": "raw",
-									"raw": "{\r\n    \"username\": \"alfred77\",\r\n    \"password\": \"12345678\"\r\n}",
+									"raw": "{\r\n    \"username\": \"Jose011\",\r\n    \"password\": \"12345678\"\r\n}",
 									"options": {
 										"raw": {
 											"language": "json"
@@ -292,12 +292,21 @@
 						"header": [
 							{
 								"key": "x-token",
-								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2N2M2ODhmYzUzNDcxNmIzYjkyZWE5NmUiLCJpYXQiOjE3NDEwNzM3MTYsImV4cCI6MTc0MTA3NzMxNn0.FvkAM4srQDdvqDYCNSzC647XCBFvqc2Kdtd2VIy_Rsw",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2N2M2YTVlMDNhM2JhOWNhMTQ2MGY3OWYiLCJpYXQiOjE3NDEzNDAyNTIsImV4cCI6MTc0MTM0Mzg1Mn0.b4ZBetNdlNDQb63hNG7PCTUHs8KggW4MBmL2lRc2Av4",
 								"type": "text"
 							}
 						],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
 						"url": {
-							"raw": "http://localhost:3003/ventaOnline/v1/users/67c689f7534716b3b92ea972",
+							"raw": "http://localhost:3003/ventaOnline/v1/users/67c6a5e03a3ba9ca1460f79f",
 							"protocol": "http",
 							"host": [
 								"localhost"
@@ -307,7 +316,7 @@
 								"ventaOnline",
 								"v1",
 								"users",
-								"67c689f7534716b3b92ea972"
+								"67c6a5e03a3ba9ca1460f79f"
 							]
 						}
 					},
@@ -381,7 +390,21 @@
 					"name": "Buscar",
 					"request": {
 						"method": "GET",
-						"header": []
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3003/ventaOnline/v1/categories/67c77719addee2b9f8a23c9a",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3003",
+							"path": [
+								"ventaOnline",
+								"v1",
+								"categories",
+								"67c77719addee2b9f8a23c9a"
+							]
+						}
 					},
 					"response": []
 				},
@@ -392,7 +415,7 @@
 						"header": [
 							{
 								"key": "x-token",
-								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2N2M2YWQ4YjFmZDFlY2M1ODkwNDZhZGIiLCJpYXQiOjE3NDExNTE0MDgsImV4cCI6MTc0MTE1NTAwOH0.4NMSPwqIMVICt5Fak-ynpnXB0kLAzU4O7YbQibiDQBk",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2N2M2YWQ4YjFmZDFlY2M1ODkwNDZhZGIiLCJpYXQiOjE3NDEyNTIzNzQsImV4cCI6MTc0MTI1NTk3NH0.hOQtMouDMJQ3HeHzAViADHgtHBt3byi0MPvPIfvYeOI",
 								"type": "text"
 							}
 						],
@@ -406,7 +429,7 @@
 							}
 						},
 						"url": {
-							"raw": "http://localhost:3003/ventaOnline/v1/categories/67c77ed616599fa87726184e",
+							"raw": "http://localhost:3003/ventaOnline/v1/categories/67c9676620b8ba08140be543",
 							"protocol": "http",
 							"host": [
 								"localhost"
@@ -416,7 +439,7 @@
 								"ventaOnline",
 								"v1",
 								"categories",
-								"67c77ed616599fa87726184e"
+								"67c9676620b8ba08140be543"
 							]
 						}
 					},
@@ -429,7 +452,7 @@
 						"header": [
 							{
 								"key": "x-token",
-								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2N2M2YWQ4YjFmZDFlY2M1ODkwNDZhZGIiLCJpYXQiOjE3NDExNTUyMDUsImV4cCI6MTc0MTE1ODgwNX0.eYLQawfmK9wKtS1eIw42Kf_ZC2tmd6ahpiBkr8KUXpE",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2N2M2YWQ4YjFmZDFlY2M1ODkwNDZhZGIiLCJpYXQiOjE3NDEyNTIzNzQsImV4cCI6MTc0MTI1NTk3NH0.hOQtMouDMJQ3HeHzAViADHgtHBt3byi0MPvPIfvYeOI",
 								"type": "text"
 							}
 						],
@@ -494,7 +517,7 @@
 								"method": "GET",
 								"header": [],
 								"url": {
-									"raw": "http://localhost:3003/ventaOnline/v1/products/buscarProductoPorCategoria/frutas",
+									"raw": "http://localhost:3003/ventaOnline/v1/products/buscarProductoPorCategoria/universal",
 									"protocol": "http",
 									"host": [
 										"localhost"
@@ -505,7 +528,7 @@
 										"v1",
 										"products",
 										"buscarProductoPorCategoria",
-										"frutas"
+										"universal"
 									]
 								}
 							},
@@ -532,6 +555,28 @@
 								}
 							},
 							"response": []
+						},
+						{
+							"name": "Productos-agotados",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:3003/ventaOnline/v1/products/productosAgotados",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "3003",
+									"path": [
+										"ventaOnline",
+										"v1",
+										"products",
+										"productosAgotados"
+									]
+								}
+							},
+							"response": []
 						}
 					]
 				},
@@ -542,13 +587,13 @@
 						"header": [
 							{
 								"key": "x-token",
-								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2N2M2YWQ4YjFmZDFlY2M1ODkwNDZhZGIiLCJpYXQiOjE3NDExNTk2NTUsImV4cCI6MTc0MTE2MzI1NX0.VnQ4ZMitardKgG3WDp23Sh65_QVfyJyKVDrnr66lpPs",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2N2M2YWQ4YjFmZDFlY2M1ODkwNDZhZGIiLCJpYXQiOjE3NDEyNTE4NTAsImV4cCI6MTc0MTI1NTQ1MH0.yQXp3TMSpXIHsuIRNYIbSH8Nle9aFf0fJDPofqansPE",
 								"type": "text"
 							}
 						],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n    \"nameProduct\": \"Uva\",\r\n    \"description\": \"deliciosas uvas\",\r\n    \"price\": 5,\r\n    \"stock\": 7,\r\n    \"category\": \"frutas\"\r\n}",
+							"raw": "{\r\n    \"nameProduct\": \"kaka\",\r\n    \"description\": \"deliciosas kaka\",\r\n    \"price\": 5,\r\n    \"stock\": 2,\r\n    \"category\": \"UNIVERSAL\"\r\n}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -600,7 +645,7 @@
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "http://localhost:3003/ventaOnline/v1/products/67c7dc2fbd18094e6d902645",
+							"raw": "http://localhost:3003/ventaOnline/v1/products/67c7dcb8b2e4baeb656008d7",
 							"protocol": "http",
 							"host": [
 								"localhost"
@@ -610,7 +655,7 @@
 								"ventaOnline",
 								"v1",
 								"products",
-								"67c7dc2fbd18094e6d902645"
+								"67c7dcb8b2e4baeb656008d7"
 							]
 						}
 					},
@@ -623,47 +668,19 @@
 						"header": [
 							{
 								"key": "x-token",
-								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2N2M2YWQ4YjFmZDFlY2M1ODkwNDZhZGIiLCJpYXQiOjE3NDExNTM0MzQsImV4cCI6MTc0MTE1NzAzNH0.a7jmb3b5AyCoislu_qBB5ael8KZ90GoCSj82Zdju6vY",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2N2M2YWQ4YjFmZDFlY2M1ODkwNDZhZGIiLCJpYXQiOjE3NDEyNTQ0MzcsImV4cCI6MTc0MTI1ODAzN30.DZAxRBTYnUAmhhVgDQr_v7TBBVwyfoyTvGXK7AGvWeE",
 								"type": "text"
 							}
 						],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n    \"nameProduct\": \"Zanahoria\",\r\n    \"description\": \"deliciosas y de alta calidad\",\r\n    \"price\": 10,\r\n    \"stock\": 8,\r\n    \"category\": \"verduras\"\r\n}",
+							"raw": "{\r\n    \"nameProduct\": \"manzana\",\r\n    \"description\": \"deliciosas y dulces\",\r\n    \"price\": 10,\r\n    \"stock\": 2,\r\n    \"category\": \"universal\"\r\n}",
 							"options": {
 								"raw": {
 									"language": "json"
 								}
 							}
 						},
-						"url": {
-							"raw": "http://localhost:3003/ventaOnline/v1/products/67c7e4232fe51c8a02462347",
-							"protocol": "http",
-							"host": [
-								"localhost"
-							],
-							"port": "3003",
-							"path": [
-								"ventaOnline",
-								"v1",
-								"products",
-								"67c7e4232fe51c8a02462347"
-							]
-						}
-					},
-					"response": []
-				},
-				{
-					"name": "Eliminar",
-					"request": {
-						"method": "DELETE",
-						"header": [
-							{
-								"key": "x-token",
-								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2N2M2YWQ4YjFmZDFlY2M1ODkwNDZhZGIiLCJpYXQiOjE3NDExNTQ2MDYsImV4cCI6MTc0MTE1ODIwNn0.80uiJ61CbODuO2R8XMTHAwounc-PRN63lbV_8lGG9K4",
-								"type": "text"
-							}
-						],
 						"url": {
 							"raw": "http://localhost:3003/ventaOnline/v1/products/67c7dcb8b2e4baeb656008d7",
 							"protocol": "http",
@@ -676,6 +693,300 @@
 								"v1",
 								"products",
 								"67c7dcb8b2e4baeb656008d7"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Eliminar",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "x-token",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2N2M2YWQ4YjFmZDFlY2M1ODkwNDZhZGIiLCJpYXQiOjE3NDEzMzkzMTgsImV4cCI6MTc0MTM0MjkxOH0.cS_SWOTguvkRrw8u5NFvppvc_9TJJs9QyghaRh5D680",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:3003/ventaOnline/v1/products/67c96ac5a70edbd665968b8c",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3003",
+							"path": [
+								"ventaOnline",
+								"v1",
+								"products",
+								"67c96ac5a70edbd665968b8c"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Shopping-carts",
+			"item": [
+				{
+					"name": "Buscar-carrito-por-cliente",
+					"item": [
+						{
+							"name": "Bucar-carrito-por-clienteId",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:3003/ventaOnline/v1/shoppingcarts/getShoppingCartByClient/67c688fc534716b3b92ea96e",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "3003",
+									"path": [
+										"ventaOnline",
+										"v1",
+										"shoppingcarts",
+										"getShoppingCartByClient",
+										"67c688fc534716b3b92ea96e"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "Listar",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3003/ventaOnline/v1/shoppingcarts",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3003",
+							"path": [
+								"ventaOnline",
+								"v1",
+								"shoppingcarts"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Buscar",
+					"request": {
+						"method": "GET",
+						"header": []
+					},
+					"response": []
+				},
+				{
+					"name": "Agregar",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"client\": \"Jose\",\r\n    \"products\": [\r\n        {\r\n            \"nameProduct\": \"uva\",\r\n            \"quantity\": 1\r\n        },\r\n        {\r\n            \"nameProduct\": \"manzana\",\r\n            \"quantity\": 1\r\n        }\r\n    ]\r\n}\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3003/ventaOnline/v1/shoppingcarts/",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3003",
+							"path": [
+								"ventaOnline",
+								"v1",
+								"shoppingcarts",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Editar",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "x-token",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2N2M2ODhmYzUzNDcxNmIzYjkyZWE5NmUiLCJpYXQiOjE3NDEyNTgyNTUsImV4cCI6MTc0MTI2MTg1NX0.YuePhi4KHADflA3b82nY2z7zQsPcPjmQc57c79s43jc",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"client\": \"Alfredo\",\r\n    \"products\": [\r\n        {\r\n            \"nameProduct\": \"manzana\",\r\n            \"quantity\": 4\r\n        },\r\n        {\r\n            \"nameProduct\": \"ZANAHORIA\",\r\n            \"quantity\": 4\r\n        }\r\n    ]\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3003/ventaOnline/v1/shoppingcarts/67c97c31bc9f8a0f6fc2ed5f",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3003",
+							"path": [
+								"ventaOnline",
+								"v1",
+								"shoppingcarts",
+								"67c97c31bc9f8a0f6fc2ed5f"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Eliminar",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "x-token",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2N2M2ODhmYzUzNDcxNmIzYjkyZWE5NmUiLCJpYXQiOjE3NDEyNTczNTAsImV4cCI6MTc0MTI2MDk1MH0.1YFCJ53diJyh4TM5lqfxgXTRnQt9eOpFh0Ws1oZA82Q",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:3003/ventaOnline/v1/shoppingcarts/67c97ad5ad3bdb908dce79fa",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3003",
+							"path": [
+								"ventaOnline",
+								"v1",
+								"shoppingcarts",
+								"67c97ad5ad3bdb908dce79fa"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Invoices",
+			"item": [
+				{
+					"name": "Buscar-fac-de-un-cliente",
+					"item": [
+						{
+							"name": "Buscar-fac-deun-cliente",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:3003/ventaOnline/v1/invoices/facturasdeuncliente/Jose",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "3003",
+									"path": [
+										"ventaOnline",
+										"v1",
+										"invoices",
+										"facturasdeuncliente",
+										"Jose"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "Agregar",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"shoppingCart\": \"67cab301b69609185a5f7111\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3003/ventaOnline/v1/invoices/",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3003",
+							"path": [
+								"ventaOnline",
+								"v1",
+								"invoices",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Listar",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3003/ventaOnline/v1/invoices/",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3003",
+							"path": [
+								"ventaOnline",
+								"v1",
+								"invoices",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Buscar",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3003/ventaOnline/v1/invoices/67cab343b69609185a5f7126",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3003",
+							"path": [
+								"ventaOnline",
+								"v1",
+								"invoices",
+								"67cab343b69609185a5f7126"
 							]
 						}
 					},

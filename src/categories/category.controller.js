@@ -12,9 +12,9 @@ export const getCategories = async (req, res) =>{
                 .skip(Number(desde))
                 .limit(Number(limite))
                 .populate({
-                    path: 'products', // Campo que hace referencia a los productos
-                    select: 'nameProduct description price stock sold', // Seleccionamos los campos que queremos de los productos
-                    match: { estado: true } // Solo productos activos
+                    path: 'products',
+                    select: 'nameProduct description price stock sold',
+                    match: { estado: true }
                 })
         ])
 

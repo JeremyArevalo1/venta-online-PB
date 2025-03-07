@@ -11,6 +11,7 @@ import authUsers from '../src/users/user.routes.js';
 import authCategoy from '../src/categories/category.routes.js';
 import authProduct from '../src/products/product.routes.js';
 import authShoppingCart from '../src/shoppingCart/shoppingCart.routes.js';
+import authInvoice from '../src/invoices/invoice.routes.js';
  
 
 const middlewares = (app) => {
@@ -28,6 +29,7 @@ const routes = (app) => {
     app.use('/ventaOnline/v1/categories', authCategoy);
     app.use('/ventaOnline/v1/products', authProduct);
     app.use('/ventaOnline/v1/shoppingcarts', authShoppingCart);
+    app.use('/ventaOnline/v1/invoices', authInvoice);
 }
 
 const conectarDB = async () => {

@@ -78,12 +78,12 @@ export const addShoppingCarts = async (req, res) => {
 
         const productsArray = [];
         for (let item of data.products) {
-            const product = await Product.findOne({ nameProduct: item.nameProduct.toLowerCase() });
+            const product = await Product.findOne({ nameProduct: item.nameProduct.toLowerCase(), estado: true });
 
             if (!product) {
                 return res.status(404).json({
                     success: false,
-                    message: `Producto '${item.nameProduct}' no encontrado`
+                    message: `Producto '${item.nameProduct}' no encontrado o esta desactivado (estado: false)`
                 });
             }
 
